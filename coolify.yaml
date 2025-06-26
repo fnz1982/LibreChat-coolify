@@ -53,6 +53,8 @@ services:
       - 'OPENROUTER_KEY=${OPENROUTER_KEY:-user_provided}'
       - 'GOOGLE_MODELS=${GOOGLE_MODELS:-gemini-2.5-pro-exp-03-25,gemini-2.0-flash-exp}'
       - 'CONFIG_PATH=/app/custom/config/librechat.yaml'
+      - 'ALLOW_SOCIAL_LOGIN=true'
+      - 'ALLOW_SOCIAL_REGISTRATION=true'
     volumes:
       - 'librechat-images:/app/client/public/images'
       - 'librechat-uploads:/app/uploads'
