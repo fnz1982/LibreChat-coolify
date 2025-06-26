@@ -1,6 +1,8 @@
 services:
   librechat:
     image: 'ghcr.io/danny-avila/librechat-dev-api:latest'
+    ports:
+      - "3080:3080"
     depends_on:
       mongodb:
         condition: service_healthy
@@ -49,7 +51,7 @@ services:
       - 'DEBUG_LOGGING=${DEBUG_LOGGING:-true}'
       - 'NO_INDEX=${NO_INDEX:-true}'
       - 'OPENAI_MODELS=${OPENAI_MODELS:-o3,o4-mini,gpt-4o,gpt-4.1}'
-      - 'ENDPOINTS=${ENDPOINTS:-openAI,azureOpenAI,google,anthropic}'
+      - 'ENDPOINTS=${ENDPOINTS:-openAI,google}'
       - 'OPENROUTER_KEY=${OPENROUTER_KEY:-user_provided}'
       - 'GOOGLE_MODELS=${GOOGLE_MODELS:-gemini-2.5-pro-exp-03-25,gemini-2.0-flash-exp}'
       - 'CONFIG_PATH=/app/librechat.yaml'
