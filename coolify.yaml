@@ -59,7 +59,9 @@ services:
       - 'ALLOW_SOCIAL_REGISTRATION=${ALLOW_SOCIAL_REGISTRATION:-true}'
       - 'SERPER_API_KEY=user_provided'
       - 'FIRECRAWL_API_KEY=user_provided'
+      - 'FIRECRAWL_API_URL=user_provided'
       - 'JINA_API_KEY=user_provided'
+      - 'COHERE_API_KEY=user_provided'
     volumes:
       - 'librechat-images:/app/client/public/images'
       - 'librechat-uploads:/app/uploads'
