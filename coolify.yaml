@@ -161,4 +161,3 @@ volumes:
   librechat-images: null
   librechat-logs: null
   librechat-uploads: null
-  librechat-config: null
