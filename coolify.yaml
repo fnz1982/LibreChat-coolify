@@ -59,7 +59,7 @@ services:
       - 'librechat-images:/app/client/public/images'
       - 'librechat-uploads:/app/uploads'
       - 'librechat-logs:/app/api/logs'
-      - './custom/config/librechat.yaml:/app/custom/config/librechat.yaml'
+      - './custom/config:/app/custom/config:ro'
     healthcheck:
       test:
         - CMD
