@@ -52,14 +52,14 @@ services:
       - 'ENDPOINTS=${ENDPOINTS:-openAI,azureOpenAI,google,anthropic}'
       - 'OPENROUTER_KEY=${OPENROUTER_KEY:-user_provided}'
       - 'GOOGLE_MODELS=${GOOGLE_MODELS:-gemini-2.5-pro-exp-03-25,gemini-2.0-flash-exp}'
-      - 'CONFIG_PATH=/app/custom/config/librechat.yaml'
+      - 'CONFIG_PATH=/app/librechat.yaml'
       - 'ALLOW_SOCIAL_LOGIN=${ALLOW_SOCIAL_LOGIN:-true}'
       - 'ALLOW_SOCIAL_REGISTRATION=${ALLOW_SOCIAL_REGISTRATION:-true}'
     volumes:
       - 'librechat-images:/app/client/public/images'
       - 'librechat-uploads:/app/uploads'
       - 'librechat-logs:/app/api/logs'
-      - './custom/config/librechat.yaml:/app/custom/config/librechat.yaml:ro'
+      - './custom/config/librechat.yaml:/app/librechat.yaml:ro'
     healthcheck:
       test:
         - CMD
