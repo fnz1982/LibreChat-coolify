@@ -22,7 +22,7 @@ services:
       - MEILI_NO_ANALYTICS=true
       - 'MEILI_MASTER_KEY=${SERVICE_PASSWORD_MEILI}'
       - 'ENABLE_MEILISEARCH=${ENABLE_MEILISEARCH:-true}'
-      - 'RAG_API_HOST=http://rag_api:8000'
+      - 'RAG_API_URL=http://rag_api:8000'
       - RAG_PORT=8000
       - 'ENABLE_RAG=${ENABLE_RAG:-true}'
       - 'JWT_SECRET=${SERVICE_PASSWORD_JWT}'
