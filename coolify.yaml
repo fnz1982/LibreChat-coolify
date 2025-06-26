@@ -37,7 +37,7 @@ services:
       - 'ALLOW_PASSWORD_RESET=${ALLOW_PASSWORD_RESET:-false}'
       - 'CREDS_KEY=${SERVICE_PASSWORD_64_CREDS}'
       - 'CREDS_IV=${SERVICE_PASSWORD_CREDS}'
-      - 'OPENAI_API_KEY=user_provided'
+      - 'OPENAI_API_KEY=${SERVICE_OPENAI_API_KEY:-user_provided}'
       - 'ANTHROPIC_API_KEY=${SERVICE_ANTHROPIC_API_KEY:-user_provided}'
       - 'GOOGLE_KEY=user_provided'
       - 'BINGAI_TOKEN=${SERVICE_BINGAI_TOKEN:-user_provided}'
