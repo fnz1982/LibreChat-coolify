@@ -126,12 +126,27 @@ registration:
 #     userMax: 50
 #     userWindowInMinutes: 60  # Rate limit window for conversation imports per user
 
-# Example Actions Object Structure
+# Actions configuration for web search tools
 actions:
   allowedDomains:
     - "swapi.dev"
     - "librechat.ai"
     - "google.com"
+    - "serper.dev"
+    - "firecrawl.dev"
+    - "jina.ai"
+
+# Tools configuration for web search
+tools:
+  web_search:
+    enabled: true
+    engines:
+      serper:
+        enabled: true
+      firecrawl:
+        enabled: true
+      jina:
+        enabled: true
 
 # Example MCP Servers Object Structure
 # mcpServers:
@@ -246,7 +261,7 @@ endpoints:
 #     # Option 1: Use existing agent by ID
 #     id: "your-memory-agent-id"
 #     # Option 2: Define agent inline
-#     # provider: "openai"
+#     # provider: "git ai"
 #     # model: "gpt-4o-mini"
 #     # instructions: "You are a memory management assistant. Store and manage user information accurately."
 #     # model_parameters:
